@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: black;
+        color: white; /* Text color */
+        }
+        .quiz-container {
+            width: 50%;
+            margin: auto;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #answers {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>Card Quiz</h1>
+    <p>To get a new card, click NEXT. Match the PAO properties below the image.</p>
+
+    <img id="cardImage" src="placeholder.jpg" alt="Card Image">
+
+    <h3>Select or type matching properties</h3>
+    <label for="person">Person:</label>
+    <input type="text" id="personInput" placeholder="Type or select person">
+
+    <label for="action">Action:</label>
+    <input type="text" id="actionInput" placeholder="Type or select action">
+
+    <label for="object">Object:</label>
+    <input type="text" id="objectInput" placeholder="Type or select object">
+
+    <label for="card">Card:</label>
+    <input type="text" id="cardInput" placeholder="Type or select card">
+
+    <button onclick="checkAnswer()">Check Answer</button>
+    <button onclick="revealAnswer()">Reveal Answer</button>
+
+    <div id="answers"></div>
+</div>
+
+<script>
+    function checkAnswer() {
+        // Implement your logic to check the user's answer
+        // Compare the input values with the correct answers
+        // Display whether the answer is correct or not
+    }
+
+    function revealAnswer() {
+        // Implement your logic to reveal the correct answers
+        // Display the correct answers in the "answers" div
+    }
+</script>
+
+</body>
+</html>

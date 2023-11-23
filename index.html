@@ -1,9 +1,91 @@
-<!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAO Matrix</title>
+    <style>
+      /* Add your styles here */
+      body {
+          background-color: black;
+          color: white; /* Text color */
+      }
+
+      table {
+          border-collapse: collapse;
+          width: 100%;
+          border: 1px solid white; /* Set border color for the entire table */
+      }
+
+      th, td {
+          padding: 10px;
+          text-align: center;
+          border: 1px solid white; /* Set border color for table cells */
+      }
+
+      /* Style for the suits */
+      .suit-cell {
+          font-size: 20px;
+      }
+  </style>
+</head>
+<body>
+    <h1>PAO Matrix</h1>
+
+    <table id="matrix">
+      <tr>
+          <th></th> <!-- Empty cell for alignment -->
+          <th>SPORT ATHLETE</th>
+          <th>MOVIE STAR</th>
+          <th>CONTROVERSIAL</th>
+          <th>BRAIN & BEAUTY</th>
+          <th>POWERFUL</th>
+          <th>RELIGIOUS</th>
+          <th>TOP CELEBRITY</th>
+      </tr>
+      <tr>
+          <td class="suit-cell">♥</td>
+          <td id="Hearts-SPORT-ATHLETE"></td>
+          <td id="Hearts-MOVIE-STAR"></td>
+          <td id="Hearts-CONTROVERSIAL"></td>
+          <td id="Hearts-BRAIN-BEAUTY"></td>
+          <td id="Hearts-POWERFUL"></td>
+          <td id="Hearts-RELIGIOUS"></td>
+          <td id="Hearts-TOP-CELEBRITY"></td>
+      </tr>
+      <tr>
+          <td class="suit-cell">♠</td>
+          <td id="Spades-SPORT-ATHLETE"></td>
+          <td id="Spades-MOVIE-STAR"></td>
+          <td id="Spades-CONTROVERSIAL"></td>
+          <td id="Spades-BRAIN-BEAUTY"></td>
+          <td id="Spades-POWERFUL"></td>
+          <td id="Spades-RELIGIOUS"></td>
+          <td id="Spades-TOP-CELEBRITY"></td>
+      </tr>
+      <tr>
+          <td class="suit-cell">♦</td>
+          <td id="Diamonds-SPORT-ATHLETE"></td>
+          <td id="Diamonds-MOVIE-STAR"></td>
+          <td id="Diamonds-CONTROVERSIAL"></td>
+          <td id="Diamonds-BRAIN-BEAUTY"></td>
+          <td id="Diamonds-POWERFUL"></td>
+          <td id="Diamonds-RELIGIOUS"></td>
+          <td id="Diamonds-TOP-CELEBRITY"></td>
+      </tr>
+      <tr>
+          <td class="suit-cell">♣</td>
+          <td id="Clubs-SPORT-ATHLETE"></td>
+          <td id="Clubs-MOVIE-STAR"></td>
+          <td id="Clubs-CONTROVERSIAL"></td>
+          <td id="Clubs-BRAIN-BEAUTY"></td>
+          <td id="Clubs-POWERFUL"></td>
+          <td id="Clubs-RELIGIOUS"></td>
+          <td id="Clubs-TOP-CELEBRITY"></td>
+      </tr>
+  </table>
+
+
+    
+</body>
 </html>

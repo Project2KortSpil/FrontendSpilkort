@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Person Quiz</title>
+    <style>
+        body {
+          background-color: black;
+          color: white; /* Text color */
+        }
+    </style>
 
     <link rel="stylesheet" type="text/css" href="quizstyle.css">
 </head>
@@ -52,6 +58,8 @@
 
 
     <button onclick="moveToNextCard()">Next Person</button>
+    <button><a href="index.html">See Matrix</a></button>
+
     <script>
         async function fetchCardValuesFromURL(url) {
             try {

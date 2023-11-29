@@ -1,39 +1,21 @@
 let matrixVisible = false; // Variable to track matrix visibility
 
 function displayCards() {
-  const cardPopup = document.getElementById('cardPopup');
+  const popupContainer = document.getElementById('popupContainer');
   
   if (!matrixVisible) {
-    cardPopup.style.display = 'flex'; // Show the popup
+    popupContainer.style.display = 'block'; // Show the popup container
+    popupContainer.innerHTML = `<iframe src="index.html" width="100%" height="100%"></iframe>`; // Load index.html content into the popup container
     matrixVisible = true;
-    createCards();
   } else {
     closePopup();
   }
 }
 
-function createCards() {
-  const cardMatrix = document.querySelector('.cardMatrix');
-  cardMatrix.innerHTML = ''; // Clear previous cards if any
-
-  // Array containing card data (replace this with your card data)
-  const cards = [
-    { name: 'Card 1', suit: 'Hearts', value: 'A' },
-    // Add more card data here for all 52 cards
-  ];
-
-  // Create and display cards in the matrix
-  cards.forEach(card => {
-    const cardElement = document.createElement('div');
-    cardElement.classList.add('card');
-    cardElement.textContent = `${card.name} - ${card.suit} ${card.value}`;
-    cardMatrix.appendChild(cardElement);
-  });
-}
-
 function closePopup() {
-  const cardPopup = document.getElementById('cardPopup');
-  cardPopup.style.display = 'none'; // Hide the popup
+  const popupContainer = document.getElementById('popupContainer');
+  popupContainer.style.display = 'none'; // Hide the popup container
+  popupContainer.innerHTML = ''; // Clear its content
   matrixVisible = false;
 }
 

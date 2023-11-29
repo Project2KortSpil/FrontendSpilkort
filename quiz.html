@@ -362,7 +362,29 @@ document.addEventListener('keydown', function(event) {
         let globalObject;
         let globalCard;
     let data; // Declare data as a global variable
-    let currentIndex = 1; // Initialize index to 1
+   
+
+    var numbers = [];
+for (var i = 1; i <= 52; i++) {
+  numbers.push(i);
+}
+
+// Function to shuffle the array
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    // Swap array[i] and array[j]
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+}
+
+// Shuffle the array of numbers
+shuffleArray(numbers);
+
+let currentIndex = numbers[0]; 
+
     let checkboxStates = {
         name: false,
         action: false,
@@ -498,15 +520,54 @@ async function fetchData(index) {
     }
 }
 
+var numbers = [];
+for (var i = 1; i <= 52; i++) {
+  numbers.push(i);
+}
+
+// Function to shuffle the array
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    // Swap array[i] and array[j]
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+}
+
+// Shuffle the array of numbers
+shuffleArray(numbers);
 
 
-    // Function to move to the next person
-    function moveToNextCard() {
-        currentIndex++;
-        fetchData(currentIndex);
+let tryCount = 0; // Initialize a counter for the number of tries
+
+// Function to move to the next person
+function moveToNextCard() {
+    tryCount++; // Increment the try count
+    currentIndex++; // Increment the currentIndex
+
+    // Check if we have reached the end of the array
+    if (currentIndex >= numbers.length) {
+        // Optionally, you can reset the index or perform any desired action
+        currentIndex = 0;
     }
 
-    fetchData(currentIndex); // Initial fetch
+    console.log(tryCount);
+
+    // Check if 52 tries have been reached
+    if (tryCount >= 52) {
+        console.log("You have reached the end.");
+        document.getElementById('message').innerHTML = "You have reached the end.";
+
+        // Optionally, you can perform any action or show a message to the user
+        return; // Exit the function to stop further fetch attempts
+    }
+
+    fetchData(numbers[currentIndex]);
+}
+
+fetchData(currentIndex); // Initial fetch
 </script>
 
 

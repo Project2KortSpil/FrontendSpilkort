@@ -472,3 +472,6 @@ function moveToNextCard() {
 
 fetchData(currentIndex); // Initial fetch
 
+
+
+

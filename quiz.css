@@ -2,12 +2,14 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 20px;
     text-align: center;
+    transform: scale(0.9); /* Scale down the entire content by 80% */
+    font-size: 90%;  
+    background-color: black;
+    color: white; 
+
 }
-        body {
-          background-color: black;
-          color: white; /* Text color */
-        }
-   
+       
+  
 
 #quizCard {
     border: 1px solid #ccc;
@@ -129,4 +131,13 @@ button:hover {
   right: 10px;
   cursor: pointer;
   padding: 8px 12px; /* Added padding for easier clicking */
+}
+#timer {
+  font-size: 24px; /* Increase the font size for larger text */
+  font-weight: bold;
+  position: absolute;
+  top: 50%; /* Position vertically at 50% from the top */
+  transform: translateY(-50%); /* Center vertically by translating -50% of its height */
+  right: 20px; /* Adjust the right position for spacing from the right */
+  text-align: right; /* Align the text to the right */
 }

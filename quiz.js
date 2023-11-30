@@ -24,15 +24,15 @@ function togglePopup() {
 document.getElementById('closeButton').addEventListener('click', closePopup);
 
 document.addEventListener('keydown', function(event) {
-  if (event.key === 'm') {
-    if (isPopupOpen) {
-      closePopup();
-    } else {
-      openPopup();
+    if (event.ctrlKey && event.key === 'm') {
+      if (isPopupOpen) {
+        closePopup();
+      } else {
+        openPopup();
+      }
+      event.preventDefault(); // Prevent default behavior of the 'Ctrl + m' key combination
     }
-    event.preventDefault(); // Prevent default behavior of the 'm' key
-  }
-});
+  });
 
 
 

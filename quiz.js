@@ -472,3 +472,48 @@ function moveToNextCard() {
 
 fetchData(currentIndex); // Initial fetch
 
+
+
+let startTime;
+let endTime;
+let timerRunning = false;
+let timerInterval;
+
+// Function to update the timer display
+function updateTimerDisplay() {
+  const currentTime = new Date().getTime();
+  const timeDiff = currentTime - startTime;
+  const seconds = Math.floor(timeDiff / 1000);
+  document.getElementById('countdown').textContent = `Time taken: ${seconds} seconds`;
+}
+
+// Function to start the timer
+function startTimer() {
+  startTime = new Date().getTime();
+  timerRunning = true;
+  timerInterval = setInterval(updateTimerDisplay, 1000);
+  document.getElementById('startButton').style.display = 'none';
+  document.getElementById('stopButton').style.display = 'inline';
+}
+
+// Function to stop the timer
+function stopTimer() {
+  clearInterval(timerInterval);
+  timerRunning = false;
+  endTime = new Date().getTime();
+  updateTimerDisplay();
+  document.getElementById('startButton').style.display = 'inline';
+  document.getElementById('stopButton').style.display = 'none';
+}
+
+// Start button event listener
+document.getElementById('startButton').addEventListener('click', function() {
+  startTimer();
+  // Add your code to start the quiz here
+});
+
+// Stop button event listener
+document.getElementById('stopButton').addEventListener('click', function() {
+  stopTimer();
+  // Add your code to stop the quiz and handle the time taken here
+});

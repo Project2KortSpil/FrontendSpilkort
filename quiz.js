@@ -34,10 +34,6 @@ document.addEventListener('keydown', function(event) {
     }
   });
 
-
-
-
-
      
 async function fetchCardValuesFromURL(url) {
     try {
@@ -422,6 +418,34 @@ async function fetchData(index) {
         console.error('Error fetching data:', error);
     }
 }
+    // Function to start the timer
+    let timerInterval; // Variable to store the timer interval
+
+    function startTimer() {
+        let startTime = Date.now(); // Get the current time when the quiz page loads
+
+        // Update the timer every second
+        timerInterval = setInterval(function() {
+            let currentTime = Date.now();
+            let elapsedTime = currentTime - startTime;
+            
+            let seconds = Math.floor(elapsedTime / 1000);
+            let minutes = Math.floor(seconds / 60);
+            seconds = seconds % 60;
+
+            // Display the timer in the 'timer' element
+            document.getElementById('timer').innerText = `Timer: ${minutes}m ${seconds}s`;
+
+            // Check if the message div is filled, if so, stop the timer
+            let messageDiv = document.getElementById('message');
+            if (messageDiv.innerText.trim().length > 0) {
+                clearInterval(timerInterval); // Stop the timer
+            }
+        }, 1000);
+    }
+
+    // Call the function to start the timer when the page loads
+    window.onload = startTimer;
 
 var numbers = [];
 for (var i = 1; i <= 52; i++) {
@@ -471,6 +495,20 @@ function moveToNextCard() {
 }
 
 fetchData(currentIndex); // Initial fetch
+
+
+// restart game function
+
+function restartPage() {
+    location.reload(); // Reloads the current page
+}
+
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'r') {
+      restartPage()
+      event.preventDefault(); // Prevent default behavior of the 'Ctrl + r' key combination
+    }
+  });
 
 
 

@@ -52,36 +52,7 @@
 
 <h2 id="message"></h2>
 
-<script>
-    // Function to start the timer
-    let timerInterval; // Variable to store the timer interval
-
-    function startTimer() {
-        let startTime = Date.now(); // Get the current time when the quiz page loads
-
-        // Update the timer every second
-        timerInterval = setInterval(function() {
-            let currentTime = Date.now();
-            let elapsedTime = currentTime - startTime;
-            
-            let seconds = Math.floor(elapsedTime / 1000);
-            let minutes = Math.floor(seconds / 60);
-            seconds = seconds % 60;
-
-            // Display the timer in the 'timer' element
-            document.getElementById('timer').innerText = `Timer: ${minutes}m ${seconds}s`;
-
-            // Check if the message div is filled, if so, stop the timer
-            let messageDiv = document.getElementById('message');
-            if (messageDiv.innerText.trim().length > 0) {
-                clearInterval(timerInterval); // Stop the timer
-            }
-        }, 1000);
-    }
-
-    // Call the function to start the timer when the page loads
-    window.onload = startTimer;
-</script>
+<button onclick="restartPage()">Restart game</button>
   
 
 <div id="popup">

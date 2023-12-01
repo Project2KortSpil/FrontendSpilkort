@@ -467,6 +467,14 @@ function shuffleArray(array) {
 shuffleArray(numbers);
 
 
+// quick combo
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'n') {
+      moveToNextCard()
+      event.preventDefault(); // Prevent default behavior of the 'Ctrl + n' key combination
+    }
+  });
+
 let tryCount = 0; // Initialize a counter for the number of tries
 
 // Function to move to the next person
@@ -509,6 +517,10 @@ document.addEventListener('keydown', function(event) {
       event.preventDefault(); // Prevent default behavior of the 'Ctrl + r' key combination
     }
   });
+
+
+
+
 
 
 

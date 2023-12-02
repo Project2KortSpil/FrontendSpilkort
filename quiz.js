@@ -467,7 +467,7 @@ function shuffleArray(array) {
 shuffleArray(numbers);
 
 
-// quick combo
+// next btn shortcut
 document.addEventListener('keydown', function(event) {
     if (event.ctrlKey && event.key === 'n') {
       moveToNextCard()

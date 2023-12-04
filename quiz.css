@@ -67,6 +67,8 @@ button:hover {
 .suggestion {
     padding: 12px;
     cursor: pointer;
+    left: 0; /* Align the left edge with the input */
+    top: 40px; /* Adjust the top position based on your design */
 }
 
 .suggestion:hover {
@@ -141,3 +143,14 @@ button:hover {
   right: 20px; /* Adjust the right position for spacing from the right */
   text-align: right; /* Align the text to the right */
 }
+
+#autoRevealCheckboxes {
+
+  vertical-align: auto;
+  margin-left: 600px;
+  margin-top: -300px;
+}
+#autoRevealCheckboxes input[type="checkbox"] {
+  margin-bottom: 25px;
+}
+ 

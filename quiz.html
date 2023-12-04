@@ -20,50 +20,51 @@
         <input type="text" id="nameInput" placeholder="Type to search names" oninput="showSuggestions(this.value)">
         <div id="suggestionContainer" class="suggestions"></div>
 
-        <!-- Checkbox for auto-reveal -->
-        <label for="autoRevealNameCheckbox">Auto Reveal:</label>
-        <input type="checkbox" id="autoRevealNameCheckbox">
-
         <label for="actionInput">Action:</label>
         <input type="text" id="actionInput" placeholder="Type to search actions" oninput="showActionSuggestions(this.value)">
         <div id="actionSuggestionContainer" class="suggestions"></div>
-        <label for="autoRevealActionCheckbox">Auto Reveal:</label>
-        <input type="checkbox" id="autoRevealActionCheckbox">
 
         <!-- Object input -->
         <label for="objectInput">Object:</label>
         <input type="text" id="objectInput" placeholder="Type to search objects" oninput="showObjectSuggestions(this.value)">
         <div id="objectSuggestionContainer" class="suggestions"></div>
-        <label for="autoRevealObjectCheckbox">Auto Reveal:</label>
-        <input type="checkbox" id="autoRevealObjectCheckbox">
 
         <label for="cardInput">Card:</label>
         <input type="text" id="cardInput" placeholder="Type to search cards" oninput="showCardSuggestions(this.value)">
         <div id="cardSuggestionContainer" class="suggestions"></div>
-        <label for="autoRevealcardsCheckbox">Auto Reveal:</label>
+    </div>
+    <button onclick="restartPage()">Restart game</button>
+    <button onclick="moveToNextCard()">NEXT</button>
+    <button onclick="togglePopup()">MATRIX</button>
+    <!-- Auto Reveal Checkboxes outside the quiz card -->
+    <div id="autoRevealCheckboxes">
+        <label for="autoRevealNameCheckbox">Auto Reveal Person:</label>
+        <input type="checkbox" id="autoRevealNameCheckbox">
+
+        <label for="autoRevealActionCheckbox">Auto Reveal Action:</label>
+        <input type="checkbox" id="autoRevealActionCheckbox">
+
+        <label for="autoRevealObjectCheckbox">Auto Reveal Object:</label>
+        <input type="checkbox" id="autoRevealObjectCheckbox">
+
+        <label for="autoRevealcardsCheckbox">Auto Reveal Card:</label>
         <input type="checkbox" id="autoRevealcardsCheckbox">
-    
     </div>
 </div>
 
 <div id="timer">Timer : 0m 0s</div>
 
-
 <!-- Game finished message -->
 <h2 id="message"></h2>
-  
 
 <div id="popup">
   <span id="closeButton" onclick="closePopup()">Close</span>
   <iframe src="matrix.html" width="100%" height="100%" frameborder="0"></iframe>
 </div>
 
+<!-- Game buttons -->
 
-    <!-- Game buttons -->
-    <button onclick="restartPage()">Restart game</button>
-    <button onclick="moveToNextCard()">NEXT</button>
-    <button onclick="togglePopup()">MATRIX</button>
 
-    <script src="quiz.js"></script>
+<script src="quiz.js"></script>
 </body>
 </html>

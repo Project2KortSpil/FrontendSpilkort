@@ -166,7 +166,7 @@ body {
 
   vertical-align: auto;
   margin-left: 600px;
-  margin-top: -260px;
+  margin-top: -205px;
   
 }
 #autoRevealCheckboxes input[type="checkbox"] {
@@ -177,7 +177,7 @@ body {
 #PAOLabels {
   vertical-align: auto;
   margin-right: 550px;
-  margin-top: -165px;
+  margin-top: -180px;
 }
 #PAOLabels h3 {
   margin-bottom: 20px; /* Adjust the margin bottom as needed */
@@ -186,3 +186,11 @@ body {
 #quizCard h4 {
   color: orange;
 }
+
+
+#instructions {
+  position: absolute;
+  top: 20px;
+  left: 0px;
+}
+

@@ -6,24 +6,14 @@
     <title>Person Quiz</title>
     <link rel="stylesheet" type="text/css" href="quiz.css">
 </head>
+
+
 <body>
-    <div id="instructions">
-        <h1 style="color: orange;">CARD QUIZ</h1>
-    
-        <div class="step">
-            <h2 style="color: orange;">STEP 1</h2>
-            <p>To get a new card, click NEXT. Match the PAO properties, below the image.</p>
-        </div>
-    
-        <div class="step">
-            <h2 style="color: orange;">STEP 2</h2>
-            <p>To see the answers, click REVEAL. Use the instant reveal to auto-reveal values.</p>
-        </div>
-    </div>
 
 
 <!-- HTML structure for quiz display -->
 <div>
+
     <div id="quizCard">
         <div id="imageContainer">
             <img id="image" alt="Person Image">
@@ -43,6 +33,8 @@
 
         <input type="text" id="cardInput" placeholder="Type to search cards" oninput="showCardSuggestions(this.value)">
         <div id="cardSuggestionContainer" class="suggestions"></div>
+    </div>
+
     </div>
     <button onclick="restartPage()">Restart game</button>
     <button onclick="moveToNextCard()">NEXT</button>
@@ -70,7 +62,21 @@
     </div>
 </div>
 
+
 <div id="timer">Timer : 0m 0s</div>
+
+<div id="instructions">
+    <h1 style="color: orange;">CARD QUIZ</h1>
+
+    <div class="step">
+        <h2 style="color: orange;">STEP 1</h2>
+        <p>To get a new card, click NEXT. Match the PAO properties, below the image.</p>
+    </div>
+
+    <div class="step">
+        <h2 style="color: orange;">STEP 2</h2>
+        <p>To see the answers, click REVEAL. Use the instant reveal to auto-reveal values.</p>
+    </div>
 
 <!-- Game finished message -->
 <h2 id="message"></h2>

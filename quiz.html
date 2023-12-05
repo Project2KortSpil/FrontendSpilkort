@@ -8,6 +8,8 @@
 </head>
 <body>
   
+
+
 <!-- HTML structure for quiz display -->
 <div>
     <div id="quizCard">
@@ -15,21 +17,18 @@
             <img id="image" alt="Person Image">
         </div>
 
-        <label for="nameInput">Person:</label>
+        <h4>Select or type matching properties</h4>
         <!-- Input field for dynamic name entry -->
         <input type="text" id="nameInput" placeholder="Type to search names" oninput="showSuggestions(this.value)">
         <div id="suggestionContainer" class="suggestions"></div>
 
-        <label for="actionInput">Action:</label>
         <input type="text" id="actionInput" placeholder="Type to search actions" oninput="showActionSuggestions(this.value)">
         <div id="actionSuggestionContainer" class="suggestions"></div>
 
         <!-- Object input -->
-        <label for="objectInput">Object:</label>
         <input type="text" id="objectInput" placeholder="Type to search objects" oninput="showObjectSuggestions(this.value)">
         <div id="objectSuggestionContainer" class="suggestions"></div>
 
-        <label for="cardInput">Card:</label>
         <input type="text" id="cardInput" placeholder="Type to search cards" oninput="showCardSuggestions(this.value)">
         <div id="cardSuggestionContainer" class="suggestions"></div>
     </div>
@@ -50,6 +49,12 @@
 
         <label for="autoRevealcardsCheckbox"></label>
         <input type="checkbox" id="autoRevealcardsCheckbox">
+    </div>
+    <div id="PAOLabels">
+        <h3>Person</h3>
+        <h3>Action</h3>
+        <h3>Object</h3>
+        <h3>Card</h3>
     </div>
 </div>
 

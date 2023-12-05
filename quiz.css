@@ -149,9 +149,11 @@ button:hover {
   vertical-align: auto;
   margin-left: 600px;
   margin-top: -260px;
+  
 }
 #autoRevealCheckboxes input[type="checkbox"] {
   margin-bottom: 12px;
+  width: 15px
 }
 
 #PAOLabels {

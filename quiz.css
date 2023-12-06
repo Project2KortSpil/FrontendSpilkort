@@ -48,7 +48,7 @@ button {
   border: none;
   border-radius: 20px; /* Adjust this value for a squircle shape */
   cursor: pointer;
-  width: 150px; /* Set a fixed width for all buttons */
+  width: 110px; /* Set a fixed width for all buttons */
   text-align: center; /* Center the text horizontally */
   white-space: nowrap; /* Prevent text wrapping */
   overflow: hidden; /* Hide overflow text */

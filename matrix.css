@@ -39,6 +39,8 @@ td {
 td div {
   border-bottom: 1px solid white;
   padding: 5px; /* Optional: Add padding for better visual separation */
+  font-size: 12px;
+
 }
 
 /* Optional: Add padding to the cells for better spacing */

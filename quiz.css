@@ -76,6 +76,20 @@ button:hover {
   filter: brightness(90%);
 }
 
+/* Adjust the position of the REVEAL and NEXT buttons */
+.reveal-btn,
+.next-btn {
+    position: absolute;
+    top: 200px; /* Adjust this value to position vertically */
+    left: 950px; /* Adjust this value to position horizontally */
+}
+
+/* Give some space between the buttons */
+.next-btn {
+    margin-top: 50px;
+}
+
+
 
 .suggestions {
     display: none;

@@ -46,9 +46,21 @@ input {
 button {
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px; /* Adjust this value for a squircle shape */
   cursor: pointer;
+  width: 150px; /* Set a fixed width for all buttons */
+  text-align: center; /* Center the text horizontally */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Show ellipsis for overflow text */
+  margin-bottom: 10px; /* Add margin between buttons */
 }
+
+/* Hover effect for all buttons */
+button:hover {
+  filter: brightness(90%);
+}
+
 
 /* Specific styles for each button */
 .restart-btn {
@@ -71,10 +83,6 @@ button {
   color: white;
 }
 
-/* Hover effect for all buttons */
-button:hover {
-  filter: brightness(90%);
-}
 
 /* Adjust the position of the REVEAL and NEXT buttons */
 .reveal-btn,

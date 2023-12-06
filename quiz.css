@@ -42,18 +42,40 @@ input {
     display: none;
 }
 
+/* General button styles */
 button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-button:hover {
-    background-color: #45a049;
+/* Specific styles for each button */
+.restart-btn {
+  background-color: orange;
+  color: white;
 }
+
+.next-btn {
+  background-color: green;
+  color: white;
+}
+
+.reveal-btn {
+  background-color: red;
+  color: white;
+}
+
+.matrix-btn {
+  background-color: blue;
+  color: white;
+}
+
+/* Hover effect for all buttons */
+button:hover {
+  filter: brightness(90%);
+}
+
 
 .suggestions {
     display: none;

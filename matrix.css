@@ -31,3 +31,17 @@ display: block;
 border-radius: 8px; /* Optional: Add rounded corners */
 }
 
+/* Add a border between action and object in each cell */
+td {
+  border-collapse: collapse;
+}
+
+td div {
+  border-bottom: 1px solid white;
+  padding: 5px; /* Optional: Add padding for better visual separation */
+}
+
+/* Optional: Add padding to the cells for better spacing */
+td {
+  padding: 5px;
+}

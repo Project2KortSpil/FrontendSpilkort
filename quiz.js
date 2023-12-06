@@ -518,7 +518,19 @@ document.addEventListener('keydown', function(event) {
     }
   });
 
+  function revealAnswers() {
+    // Set the input values to the corresponding global variables
+    document.getElementById('nameInput').value = globalName;
+    document.getElementById('actionInput').value = globalAction;
+    document.getElementById('objectInput').value = globalObject;
+    document.getElementById('cardInput').value = globalCard;
 
+    // Validate the input values
+    validateInput(document.getElementById('nameInput'), globalName);
+    validateInput(document.getElementById('actionInput'), globalAction);
+    validateInput(document.getElementById('objectInput'), globalObject);
+    validateInputForCard(document.getElementById('cardInput'), globalCard);
+}
 
 
 

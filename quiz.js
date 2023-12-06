@@ -532,6 +532,13 @@ document.addEventListener('keydown', function(event) {
     validateInputForCard(document.getElementById('cardInput'), globalCard);
 }
 
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'b') {
+      revealAnswers()
+      event.preventDefault(); // Prevent default behavior of the 'Ctrl + b' key combination
+    }
+  });
+
 
 
 

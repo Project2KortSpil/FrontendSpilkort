@@ -261,7 +261,7 @@ body {
 #message {
   font-size: 24px;
   position: fixed;
-  top: calc(75% + 40px); /* Position 40px below the timer vertically */
+  top: calc(120% + 40px); /* Position 40px below the timer vertically */
   left: 50%;
   transform: translateX(-50%); /* Center horizontally */
 }

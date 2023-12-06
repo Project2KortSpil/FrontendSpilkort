@@ -493,7 +493,7 @@ function moveToNextCard() {
     // Check if 52 tries have been reached
     if (tryCount >= 52) {
         console.log("You have reached the end.");
-        document.getElementById('message').innerHTML = "You have reached the end.";
+        document.getElementById('message').innerHTML = "You have reached the end!";
 
         // Optionally, you can perform any action or show a message to the user
         return; // Exit the function to stop further fetch attempts

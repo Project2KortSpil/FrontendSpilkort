@@ -210,14 +210,21 @@ body {
   padding: 8px 12px; /* Added padding for easier clicking */
 }
 #timer {
-  font-size: 24px; /* Increase the font size for larger text */
+  font-size: 24px;
   font-weight: bold;
-  position: absolute;
-  top: 50%; /* Position vertically at 50% from the top */
-  transform: translateY(-50%); /* Center vertically by translating -50% of its height */
-  right: 20px; /* Adjust the right position for spacing from the right */
-  text-align: right; /* Align the text to the right */
+  position: fixed;
+  top: 75%; /* Position vertically at 50% from the top */
+  left: 50%; /* Position horizontally at 50% from the left */
+  transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+  padding: 8px 12px;
+  border-radius: 20px;
+  background-color: orange;
+  color: white;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
 
 #autoRevealCheckboxes {
 

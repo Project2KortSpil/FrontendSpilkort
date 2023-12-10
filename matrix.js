@@ -1,6 +1,6 @@
    // Fetch data from the API for each card
 for (let cardId = 1; cardId <= 52; cardId++) {
-    fetch(`http://localhost:8080/api/cards/${cardId}`)
+    fetch(`https://backendspillekort.azurewebsites.net/api/cards/${cardId}`)
         .then(response => response.json())
         .then(data => {
             // Update the content of the corresponding cell

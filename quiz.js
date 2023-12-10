@@ -47,7 +47,7 @@ async function fetchCardValuesFromURL(url) {
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
-    const cardValues = await fetchCardValuesFromURL('http://localhost:8080/api/cards/values');
+    const cardValues = await fetchCardValuesFromURL('https://backendspillekort.azurewebsites.net/api/cards/values');
 
     const cardInput = document.getElementById('cardInput');
     const cardSuggestionContainer = document.getElementById('cardSuggestionContainer');
@@ -116,7 +116,7 @@ const customSort = (input) => (a, b) => {
     }
 };
 document.addEventListener('DOMContentLoaded', async function () {
-const names = await fetchNamesFromURL('http://localhost:8080/api/person/names');
+const names = await fetchNamesFromURL('https://backendspillekort.azurewebsites.net/api/person/names');
 
 const nameInput = document.getElementById('nameInput');
 const suggestionContainer = document.getElementById('suggestionContainer');
@@ -171,7 +171,7 @@ document.addEventListener('click', function (event) {
     }
 
     document.addEventListener('DOMContentLoaded', async function () {
-        const actions = await fetchActionsFromURL('http://localhost:8080/api/person/actions');
+        const actions = await fetchActionsFromURL('https://backendspillekort.azurewebsites.net/api/person/actions');
 
         const actionInput = document.getElementById('actionInput');
         const actionSuggestionContainer = document.getElementById('actionSuggestionContainer');
@@ -219,7 +219,7 @@ document.addEventListener('click', function (event) {
     }
 
     document.addEventListener('DOMContentLoaded', async function () {
-        const objects = await fetchObjectsFromURL('http://localhost:8080/api/person/objects');
+        const objects = await fetchObjectsFromURL('https://backendspillekort.azurewebsites.net/api/person/objects');
 
         const objectInput = document.getElementById('objectInput');
         const objectSuggestionContainer = document.getElementById('objectSuggestionContainer');
@@ -351,7 +351,7 @@ function validateInputForCard(inputElement, correctValue) {
 
     // Function to fetch data from the API based on the shuffled array
 async function fetchData(index) {
-    const apiUrl = `http://localhost:8080/api/cards/${index}`;
+    const apiUrl = `https://backendspillekort.azurewebsites.net/api/cards/${index}`;
 
     try {
         const response = await fetch(apiUrl);
